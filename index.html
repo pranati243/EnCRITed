@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="study.css" />
 </head>
 
 <body>
@@ -42,6 +43,14 @@
                     <p class="tagline">FCRIT Cipher Lab</p>
                 </div>
             </div>
+            <button class="study-toggle" id="studyToggle" title="Toggle Study Mode">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+                <span>Study Mode</span>
+            </button>
             <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode" aria-label="Toggle theme">
                 <!-- Sun icon (shown in dark mode) -->
                 <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -200,12 +209,24 @@
         </section>
     </main>
 
+    <!-- ===== Study Mode Section ===== -->
+    <section id="studyMode">
+        <div class="study-hero">
+            <h2>📚 Cipher Study Mode</h2>
+            <p>Choose a cipher technique below to learn how it works, see animated examples, and test your
+                understanding.</p>
+        </div>
+        <div class="cipher-grid" id="cipherCardGrid"></div>
+        <div id="lessonView"></div>
+    </section>
+
     <!-- ===== Footer ===== -->
     <footer class="app-footer">
         <p>EnCRITed &mdash; FCRIT Cipher Lab &copy; 2026 &mdash; <em>"Every secret has a key."</em></p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="study.js"></script>
 </body>
 
 </html>
